@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}); // Corrected the constructor
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +20,75 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.deepOrange,
         ),
         body: SafeArea(
-          child: Container(
-            height: 200,
-            width: 200,
-            margin: EdgeInsets.all(20.0),
-            color: Colors.greenAccent,
-            child: Center(
-              child: Text(
-                'Basic learning flutter',
-                style: TextStyle(
-                  fontStyle: FontStyle.italic,
-                  fontSize: 18,
-                ),
+          child: Center(
+            child: SingleChildScrollView( // Wrap the Column with SingleChildScrollView
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 200,
+                    width: 200,
+                    margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20),
+                    color: Colors.greenAccent,
+                    child: Center(
+                      child: Text(
+                        'Basic learning flutter',
+                        style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    height: 200,
+                    width: 200,
+                    margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20),
+                    color: Colors.pink,
+                    child: Center(
+                      child: Text(
+                        'Basic learning flutter',
+                        style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    height: 200,
+                    width: 200,
+                    margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20),
+                    color: Colors.cyanAccent,
+                    child: Center(
+                      child: Text(
+                        'Basic learning flutter',
+                        style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    height: 200,
+                    width: 200,
+                    margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20),
+                    color: Colors.red,
+                    child: Center(
+                      child: Text(
+                        'Basic learning flutter',
+                        style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -40,3 +97,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+// new add column
+// add sizebox() for space
+// and using multiple container
