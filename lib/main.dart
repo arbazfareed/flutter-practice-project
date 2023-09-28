@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-MyApp()
+    MyApp(),
   );
 }
-// control space
-// stl and stf
+
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}); // Corrected the constructor
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +15,26 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black38,
         appBar: AppBar(
-          title: Text('My App'), // Add a title widget inside AppBar
-          centerTitle: true, // Center the title
-          backgroundColor: Colors.deepOrange, // Set the background color
+          title: Text('My App'),
+          centerTitle: true,
+          backgroundColor: Colors.deepOrange,
         ),
-
-        body: Container(
-          color:Colors.red,
+        body: SafeArea(
+          child: Container(
+            height: 200,
+            width: 200,
+            margin: EdgeInsets.all(20.0),
+            color: Colors.greenAccent,
+            child: Center(
+              child: Text(
+                'Basic learning flutter',
+                style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );
