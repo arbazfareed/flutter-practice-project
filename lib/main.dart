@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.vertical,
 
-              child: Row(
+              child: Column(
                // crossAxisAlignment: CrossAxisAlignment.center,
                // mainAxisAlignment: MainAxisAlignment.center,
 
