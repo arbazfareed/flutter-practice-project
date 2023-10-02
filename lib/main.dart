@@ -21,14 +21,17 @@ class MyApp extends StatelessWidget {
         ),
         body: SafeArea(
           child: Center(
-            child: SingleChildScrollView( // Wrap the Column with SingleChildScrollView
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+
+              child: Row(
+               // crossAxisAlignment: CrossAxisAlignment.center,
+               // mainAxisAlignment: MainAxisAlignment.center,
+
                 children: <Widget>[
                   Container(
                     height: 200,
                     width: 200,
-                    margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20),
                     color: Colors.greenAccent,
                     child: Center(
                       child: Text(
@@ -40,11 +43,10 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(width: 20),
                   Container(
                     height: 200,
                     width: 200,
-                    margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20),
                     color: Colors.pink,
                     child: Center(
                       child: Text(
@@ -56,11 +58,10 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(width: 20),
                   Container(
                     height: 200,
                     width: 200,
-                    margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20),
                     color: Colors.cyanAccent,
                     child: Center(
                       child: Text(
@@ -72,11 +73,10 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(width: 20),
                   Container(
                     height: 200,
                     width: 200,
-                    margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20),
                     color: Colors.red,
                     child: Center(
                       child: Text(
@@ -97,8 +97,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-// new add column
-// add sizebox() for space
-// and using multiple container
