@@ -13,87 +13,25 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black38,
         appBar: AppBar(
-          title: Text('My App'),
-          centerTitle: true,
-          backgroundColor: Colors.deepOrange,
+          title: Center(
+              child: Text(
+              'Registeration')
+          ),
         ),
-        body: SafeArea(
-          child: Center(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
+        body: Center(
+          child: TextButton(
+            onPressed: ()async{},
+            child:  Text('Registeration',
 
-              child: Column(
-               // crossAxisAlignment: CrossAxisAlignment.center,
-               // mainAxisAlignment: MainAxisAlignment.center,
-
-                children: <Widget>[
-                  Container(
-                    height: 200,
-                    width: 200,
-                    color: Colors.greenAccent,
-                    child: Center(
-                      child: Text(
-                        'Basic learning flutter',
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Container(
-                    height: 200,
-                    width: 200,
-                    color: Colors.pink,
-                    child: Center(
-                      child: Text(
-                        'Basic learning flutter',
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Container(
-                    height: 200,
-                    width: 200,
-                    color: Colors.cyanAccent,
-                    child: Center(
-                      child: Text(
-                        'Basic learning flutter',
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Container(
-                    height: 200,
-                    width: 200,
-                    color: Colors.red,
-                    child: Center(
-                      child: Text(
-                        'Basic learning flutter',
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ),
           ),
         ),
-      ),
+      )
     );
   }
 }
+// learn here
+// 1:  scrollDirection: Axis.vertical,// For Column
+// 2: scrollDirection:Axis.horizontal,// For ROw
+// 3:
