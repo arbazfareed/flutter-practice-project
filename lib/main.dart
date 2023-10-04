@@ -7,9 +7,17 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key});
-
+  MyApp({Key? key});
+ late final TextEditingController _email;
+ late final TextEditingController _password;
   @override
+  void initState()
+  {
+    _email=TextEditingController();
+    _password=TextEditingController();
+   // super.initState();
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -20,11 +28,19 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: TextButton(
-            onPressed: ()async{},
-            child:  Text('Registeration',
+          child: Column(
+            children: [
+              TextField(),
+              TextField(),
 
-            ),
+              TextButton(
+
+                onPressed: ()async{},
+                child:  Text('Registeration',
+
+                ),
+              ),
+            ],
           ),
         ),
       )
