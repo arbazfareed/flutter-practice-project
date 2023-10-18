@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.black,
         appBar: AppBar(
+          backgroundColor: Colors.green,
           title: Center(
               child: Text(
               'Registeration')
@@ -22,14 +23,25 @@ class MyApp extends StatelessWidget {
         ),
         body:SafeArea(
 
-  child: Column(
-    children: [
-      CircleAvatar(
-        radius: 50.0,
+  child: Center(
+    child: Column(
+      children: [
+        CircleAvatar(
+          radius: 50.0,
 
-        backgroundImage: AssetImage('assets/images/arbaz.jpg'),
-      )
-    ],
+          backgroundImage: AssetImage('assets/images/arbaz.jpg'),
+        ),
+        Text(
+          'ArbazFareed',
+
+              style: TextStyle (
+                fontSize: 20,
+                color: Colors.white,
+                fontStyle: FontStyle.italic,
+              ),
+        ),
+      ],
+    ),
   ),
         ),
         ),
@@ -41,3 +53,16 @@ class MyApp extends StatelessWidget {
 // 1:  scrollDirection: Axis.vertical,// For Column
 // 2: scrollDirection:Axis.horizontal,// For ROw
 // 3:
+
+
+
+
+
+
+
+
+
+
+
+
+
