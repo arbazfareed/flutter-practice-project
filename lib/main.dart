@@ -8,42 +8,32 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key});
- late final TextEditingController _email;
- late final TextEditingController _password;
-  @override
-  void initState()
-  {
-    _email=TextEditingController();
-    _password=TextEditingController();
-   // super.initState();
-  }
+
 
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.cyan,
         appBar: AppBar(
           title: Center(
               child: Text(
               'Registeration')
           ),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              TextField(),
-              TextField(),
+        body:SafeArea(
 
-              TextButton(
+  child: Column(
+    children: [
+      CircleAvatar(
+        radius: 50.0,
 
-                onPressed: ()async{},
-                child:  Text('Registeration',
-
-                ),
-              ),
-            ],
-          ),
-        ),
+        backgroundImage: AssetImage('assets/images/arbaz.jpg'),
       )
+    ],
+  ),
+        ),
+        ),
+
     );
   }
 }
